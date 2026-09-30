@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="id">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>RumahLab — Belajar dari data</title><link rel="stylesheet" href="/static/style.css"><script src="/static/app.js" defer></script></head>
+<body>
+<header><a class="brand" href="/">▧ Rumah<span>Lab</span></a><nav><a href="#evaluasi">Evaluasi model</a><a href="/docs">Dokumentasi API ↗</a></nav></header>
+<main>
+<section class="intro"><p class="eyebrow">PYTHON + MACHINE LEARNING · PROYEK BELAJAR</p><h1>Dari data rumah,<br>menjadi <em>prediksi.</em></h1><p class="lead">Jelajahi cara model belajar. Masukkan karakteristik rumah, lihat perkiraan harga, lalu pahami seberapa baik model bekerja.</p></section>
+<div class="workspace">
+<section class="card form-card"><div class="section-heading"><span class="step">01</span><h2>Coba sebuah rumah</h2></div>
+<label for="mode">Pilih tahap belajar</label><select id="mode"><option value="synthetic">Dasar · Data sintetis</option><option value="jabodetabek">Lanjutan · Data Jabodetabek</option></select>
+<p id="context" class="helper"></p><p id="status" role="status"></p>
+<form id="prediction-form"><div id="fields"></div><div class="actions"><button type="button" id="example" class="secondary">Isi contoh</button><button type="submit" id="predict">Prediksi harga →</button></div></form>
+<p id="error" class="error" role="alert"></p>
+</section>
+<section class="card result-card" aria-live="polite"><p class="eyebrow">HASIL PREDIKSI</p><div id="result"><div class="house">⌂</div><h2>Setiap prediksi dimulai<br>dari sebuah contoh.</h2><p>Isi formulir di samping untuk melihat pola yang dipelajari model.</p></div><p id="warning" class="warning"></p><div class="note">Untuk belajar, bukan penilaian properti. Mode Jabodetabek mempelajari harga iklan pada dataset, bukan harga transaksi atau harga pasar saat ini.</div></section>
+</div>
+<section id="evaluasi" class="card evaluation"><div class="section-heading"><span class="step">02</span><h2>Pahami hasil model</h2></div><p class="helper">MAE adalah rata-rata selisih absolut prediksi dan harga data. Lebih kecil lebih baik. R² membandingkan variasi yang dijelaskan model; nilainya bisa negatif dan bukan persentase akurasi.</p><div id="metrics"></div></section>
+<section class="learning"><div><span>01 / DATA</span><h3>Mulai dari contoh</h3><p>Fitur menjelaskan rumah. Target adalah harga yang ingin dipelajari.</p></div><div><span>02 / TRAINING</span><h3>Temukan pola</h3><p>Bandingkan model di data validasi, lalu ukur hasil akhirnya pada data pengujian.</p></div><div><span>03 / PREDIKSI</span><h3>Coba masukan baru</h3><p>API memakai model yang sudah dilatih. Tidak ada training baru setiap kali tombol ditekan.</p></div></section>
+</main><footer>RumahLab · Dibangun untuk belajar, satu eksperimen setiap langkah.<a href="/docs">Jelajahi REST API ↗</a></footer>
+</body></html>
